@@ -142,7 +142,7 @@ elif page == "EDA":
     with col2:
         st.write(df["clicked"].value_counts(normalize=True))
     
-    st.markdown("### 3. Feature Distributions By Clicked")
+    st.markdown("### 3. Feature Distributions")
     
     # 1. Create the grid of histograms
     fig_grid, axes = plt.subplots(3, 2, figsize=(14, 10))
@@ -165,7 +165,7 @@ elif page == "EDA":
     plt.tight_layout()
     st.pyplot(fig_grid)
 
-    st.markdown("### 4. Feature Distributions")
+    st.markdown("### 4. Feature Distributions By Clicked ")
     numeric_cols = ["age", "area_income", "time_on_site", "internet_usage"]
     feature = st.selectbox("Select feature to plot", numeric_cols)
 
@@ -333,23 +333,22 @@ elif page == "Model & Prediction":
 
 
 elif page == "Conclusion":
-    st.title("Conclusion")
+    st.title("🧾 Conclusion")
 
     st.write(
         """
         **Key takeaways:**
         - Features such as age, area income, daily time spent on site, and daily internet usage
           show strong relationships with whether a user clicks an ad.
-        - A Logistic Regression classifier trained on these features achieves high accuracy on
-          the tet set (around 98%), with balanced precision and recall for both click and
-          no‑click classes. 
+ 
         - Simple engineered features from the ad topic line (length and word count) did not show
           strong correlation with clicks, which suggests that the generic buzzword headlines in
           this dataset carry limited predictive signal.
+          
         - The interactive app allows users to explore the dataset visually and experiment with
           different feature values to see how they affect the predicted click probability.
 
-        This project demonstrates a complete data science workflow: data loading and cleaning,
+        This project demonstrates a complete  workflow: data loading and cleaning,
         EDA, feature engineering, model training and evaluation, and deployment using Streamlit.
         """
     )
