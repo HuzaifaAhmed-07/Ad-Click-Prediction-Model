@@ -214,16 +214,16 @@ elif page == "EDA":
     # 2. Create the Click Rate by Gender bar chart
     fig_gender, ax_gender = plt.subplots()
     
-    # Calculate mean click rate by gender
+    # Calculate mean click rate by gender 
     df.groupby("male")["clicked"].mean().plot(kind="bar", ax=ax_gender)
     
     ax_gender.set_title("Click Rate by Gender (male = 1)")
     ax_gender.set_ylabel("Average click rate")
     st.pyplot(fig_gender)
 
-elif page == "Model & Prediction":
+elif page == "Model & Prediction ":
     # Page title
-    st.title("🪄 Predict Ad Click")
+    st.title("🪄 Predict Ad Click ")
 
     # Optional short subtitle
     st.markdown("Adjust the user attributes below and click **Predict** to see whether the user is likely to click the ad.")
