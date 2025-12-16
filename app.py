@@ -201,25 +201,24 @@ elif page == "EDA":
     hour_click = df.groupby("hour")["clicked"].mean()
 
     fig4, ax4 = plt.subplots()
-    hour_click.plot(kind="line", marker="o", ax=ax4)
-    ax4.set_xlabel("Hour of day")
-    ax4.set_ylabel("Average click rate")
-    ax4.set_title("Click Rate by Hour")
+    hour_click.plot(kind="line " , marker="o", ax=ax4)
+    ax4.set_xlabel("Hour of day ")
+    ax4.set_ylabel("Average click rate ")
+    ax4.set_title("Click Rate by Hour ")
     ax4.grid(True)
     st.pyplot(fig4)
     
 
-    st.markdown("### 8. Click Rate by Gender")
+    st.markdown("### 8. Click Rate by Gender ")
     
-    # 2. Create the Click Rate by Gender bar chart
+    # 2. Create the Click Rate by Gender bar chart 
     fig_gender, ax_gender = plt.subplots()
-    
     # Calculate mean click rate by gender 
     df.groupby("male")["clicked"].mean().plot(kind="bar", ax=ax_gender)
     
-    ax_gender.set_title("Click Rate by Gender (male = 1)")
-    ax_gender.set_ylabel("Average click rate")
-    st.pyplot(fig_gender)
+    ax_gender.set_title("Click Rate by Gender  (male = 1) ")
+    ax_gender.set_ylabel("Average click rate ")
+    st.pyplot(fig_gender )
 
 elif page == "Model & Prediction ":
     # Page title
@@ -249,9 +248,9 @@ elif page == "Model & Prediction ":
 
         area_income = st.number_input(
             "Area Income",
-            float(df["area_income"].min()),
+            float(df["area_income"].min() ),
             float(df["area_income"].max()),
-            float(df["area_income"].median()),
+            float(df["area_income"].median() ),
             step=1000.0,
         )
 
@@ -265,14 +264,15 @@ elif page == "Model & Prediction ":
     with right_col:
         internet_usage = st.number_input(
             "Daily Internet Usage (minutes)",
-            float(df["internet_usage"].min()),
-            float(df["internet_usage"].max()),
-            float(df["internet_usage"].median()),
-            step=1.0,
+            float(df["internet_usage"].min() ),
+            float(df["internet_usage"].max() ),
+            float(df["internet_usage"].median() ),
+            step=1.0, 
+            
         )
 
         hour = st.slider(
-            "Hour of Day (0–23)",
+            "Hour of Day (0–23) ",
             0,
             23,
             12,
@@ -287,16 +287,17 @@ elif page == "Model & Prediction ":
 
         ad_topic_words = st.slider(
             "Ad Topic Word Count",
-            int(df["ad_topic_words"].min()),
-            int(df["ad_topic_words"].max()),
-            int(df["ad_topic_words"].median()),
+            int(df["ad_topic_words"].min()) ,
+            int(df["ad_topic_words"].max()) ,
+            int(df["ad_topic_words"].median()) ,
+            
         )
 
     # Centered predict button
     st.markdown("---")
     btn_col = st.columns([3, 1, 3])[1]
     with btn_col:
-        predict_clicked = st.button("🚀 Predict", use_container_width=True)
+        predict_clicked = st.button("🚀 Predict ", use_container_width=True)
 
     if predict_clicked:
         # Build a one-row DataFrame with user input
@@ -316,10 +317,11 @@ elif page == "Model & Prediction ":
 
         # Predict
         click_pred = model.predict(user_scaled)[0]
+        
         click_proba = model.predict_proba(user_scaled)[0, 1]
 
         # Result box
-        st.markdown("### Prediction Result")
+        st.markdown("### Prediction Result ")
         if click_pred == 1:
             st.success(
                 f"✅ Predicted: **User WILL click the ad**\n\n"
@@ -333,7 +335,7 @@ elif page == "Model & Prediction ":
 
 
 elif page == "Conclusion":
-    st.title("🧾 Conclusion")
+    st.title("🧾 Conclusion ")
 
     st.write(
         """
