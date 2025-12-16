@@ -201,7 +201,7 @@ elif page == "EDA":
     hour_click = df.groupby("hour")["clicked"].mean()
 
     fig4, ax4 = plt.subplots()
-    hour_click.plot(kind="line " , marker="o", ax=ax4)
+    hour_click.plot(kind="line" , marker="o", ax=ax4)
     ax4.set_xlabel("Hour of day ")
     ax4.set_ylabel("Average click rate ")
     ax4.set_title("Click Rate by Hour ")
