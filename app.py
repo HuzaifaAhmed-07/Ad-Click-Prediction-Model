@@ -104,7 +104,7 @@ page = st.sidebar.radio(
 
 if page == "Introduction":
     st.title("🔎 Online Ad Click Prediction")
-    st.subheader("📖 Introduction")
+    st.subheader("📕 Introduction")
 
     st.write(
         """
