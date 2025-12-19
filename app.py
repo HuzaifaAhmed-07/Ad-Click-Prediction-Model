@@ -220,7 +220,7 @@ elif page == "EDA":
     ax_gender.set_ylabel("Average click rate ")
     st.pyplot(fig_gender )
 
-elif page == "Model & Prediction ":
+elif page == "Model & Prediction":
     # Page title
     st.title("🪄 Predict Ad Click ")
 
@@ -321,7 +321,7 @@ elif page == "Model & Prediction ":
         click_proba = model.predict_proba(user_scaled)[0, 1]
 
         # Result box
-        st.markdown("### Prediction Result ")
+        st.markdown("### Prediction Result")
         if click_pred == 1:
             st.success(
                 f"✅ Predicted: **User WILL click the ad**\n\n"
