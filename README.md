@@ -1,17 +1,72 @@
-# Ad-Click-Prediction-Model
-Ad Click Prediction Model using Python – predicting user engagement and click-through rates on advertisements.
-This repository contains an end‑to‑end data science project for predicting whether a user will click on an online advertisement using supervised machine learning. The project follows the full workflow: Exploratory Data Analysis (EDA), data preprocessing, model training and evaluation, and deployment as an interactive Streamlit web application.
+# Ad Click Prediction Model 📊
 
-The dataset (Advertisement – Click on Ad) includes user‑level information such as age, area income, daily time spent on site, daily internet usage, gender, timestamp, and the ad’s topic line, along with a binary label indicating whether the user clicked the ad. The goal is to learn patterns in user behaviour and ad characteristics in order to estimate the probability of a click.
+This project is an end-to-end machine learning application that predicts whether a user will click on an online advertisement. It uses supervised learning to understand user behavior and estimate click-through probability based on demographic and usage data.
 
-Key features of this project:
+The goal of this project is not just model accuracy, but also building a **complete, reproducible data science workflow** — from analysis to deployment.
 
-Exploratory Data Analysis (EDA): 10–15 analyses including summary statistics, feature distributions, correlation analysis, click‑through behaviour by demographic segments, time‑of‑day effects, and simple analysis of ad topics.
+---
 
-Data Preprocessing: Handling missing values (if any), dropping irrelevant columns (e.g. City), extracting features from timestamps (such as hour), converting ad topic text into simple categorical groups, encoding categorical variables, and splitting the data into training and test sets.
+## 📌 Project Overview
 
-Machine Learning Model: A supervised classification model (e.g. Logistic Regression / Random Forest) trained to predict whether a user will click on an ad, evaluated using metrics such as accuracy and confusion matrix, and capable of producing click‑probability scores.
+The model is trained on the **Advertisement – Click on Ad** dataset, which contains user-level information such as:
 
-Streamlit Web App: An interactive interface that presents key EDA visualizations, explains the model, and allows users to input feature values (age, income, time on site, internet usage, gender, hour, ad topic category) to get real‑time predictions of click vs. no‑click with associated probability.
+- Age  
+- Area Income  
+- Daily Time Spent on Site  
+- Daily Internet Usage  
+- Gender  
+- Timestamp  
+- Ad Topic Line  
+- Clicked on Ad (target variable)
 
-Reproducible Workflow: All steps (EDA, preprocessing, modeling, and app code) are organized so that the project can be run locally and tracked using Git and GitHub as the version‑control backbone.
+The output is a prediction of **Click / No Click**, along with the probability of a click.
+
+---
+
+## 🔍 What’s Included
+
+### 📈 Exploratory Data Analysis (EDA)
+- 10–15 meaningful analyses  
+- Feature distributions and summary statistics  
+- Correlation analysis  
+- Click behavior by age, gender, and income  
+- Time-of-day effects on ad clicks  
+- Basic analysis of ad topic categories  
+
+### 🛠️ Data Preprocessing
+- Dropping irrelevant columns (e.g. City)  
+- Feature extraction from timestamps (hour of day)  
+- Simple categorization of ad topic text  
+- Encoding categorical features  
+- Train-test split  
+
+### 🤖 Machine Learning
+- Supervised classification model  
+- Models used  **Logistic Regression**  
+- Evaluation using accuracy and confusion matrix  
+- Click-through probability prediction  
+
+### 🌐 Streamlit Web App
+- Interactive EDA visualizations  
+- Model explanation  
+- User input form for real-time predictions  
+- Displays predicted class and probability  
+
+---
+
+## 🧪 Tech Stack
+
+- Python  
+- Pandas, NumPy  
+- Matplotlib, Seaborn  
+- Scikit-learn  
+- Streamlit  
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repository  
+2. Install dependencies  
+   ```bash
+   pip install -r requirements.txt
