@@ -6,6 +6,8 @@ The goal of this project is not just model accuracy, but also building a **compl
 
 ---
 
+# 🔗 Live app link : https://ad-click-predictor.streamlit.app/
+
 ## 📌 Project Overview
 
 The model is trained on the **Advertisement – Click on Ad** dataset, which contains user-level information such as:
