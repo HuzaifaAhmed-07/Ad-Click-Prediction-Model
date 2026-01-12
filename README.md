@@ -6,7 +6,9 @@ The goal of this project is not just model accuracy, but also building a **compl
 
 ---
 
-# 🔗 Live app link : https://ad-click-predictor.streamlit.app/
+## 🔗 Live app link : https://ad-click-predictor.streamlit.app/
+
+---
 
 ## 📌 Project Overview
 
